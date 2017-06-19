@@ -1,18 +1,33 @@
 {
-    "plugins": [ "theme-api" ],
+    "plugins": [ "addcssjs", "edit-link", "theme-api", "jsfiddle", "custom-favicon", "simple-page-toc", "anchors"  ],
     "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/locize/locize-docs/edit/master/",
+            "label": "Edit"
+        },
         "theme-api": {
             "languages": [
                 {
                     "lang": "js",
-                    "name": "JavaScript",
+                    "name": "js",
                     "default": true
-                },
-                {
-                    "lang": "go",
-                    "name": "Go"
                 }
-            ]
-        }
+            ],
+            "split": true
+        },
+        "jsfiddle":{
+            "type": "script",
+            "tabs": ["result","js"],
+            "height": "500",
+            "width": "500"
+        },
+        "favicon": "assets/favicon.ico",
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+       },
+       "addcssjs": {
+         "js": ["assets/js/custom.js"]
+      }
     }
 }
