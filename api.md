@@ -1,6 +1,6 @@
-<!-- toc -->
 # API
 
+<!-- toc -->
 Do you prefer to integrate the locize api on your own?
 
 No problem! If you want to make a low level integration or just did not found an appropriate client library here you find our simple api description or you can access API via:

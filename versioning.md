@@ -1,4 +1,4 @@
-# No Versioning
+## No Versioning
 
 You can use without versioning - just using the default *latest* set of resources. For smaller projects with continues deployment or no deployment process at all this can be a suitable solution.
 
