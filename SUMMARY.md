@@ -1,12 +1,11 @@
 # Summary
 
-## Overview
+## Integration
 
 * [My Awesome API](README.md)
 * [API](api.md)
 * [FAQ](faq.md)
 
-## Methods
+## More
 
-* [Defining Methods](methods.md)
-
+* [FAQ](faq.md)
