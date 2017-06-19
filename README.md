@@ -18,6 +18,9 @@ For bigger projects or existing projects you like to migrate over to locize you 
 - **polyglot** [learn more](/integration-polyglot.md)
 - **formatJS / messageformat** [learn more](/integration-formatjs.md)
 - **other JSON based frameworks** [learn more](/api.md)
+- **other non JSON based** [learn more](/using-with-xliff-gettext.md)
+
+
 
 ## Step 3) Add new / existing segments
 
