@@ -15,4 +15,5 @@
 * [Additional Services](additional-services.md)
 * [locize vs. alternatives](locize-vs-alternatives.md)
 * [FAQ](faq.md)
+* [Changelog](changelog.md)
 
