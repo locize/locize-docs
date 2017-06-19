@@ -34,4 +34,4 @@ Using other i18n frameworks you can use the [API](/api.md "API") to do so.
 
 ## Step 4) Translate your content
 
-Start translating your content using our Interface or use one of our integrated [3rd party service](/services.md) to order them.
+Start translating your content using our Interface or use one of our integrated [3rd party service](/additional-services.md) to order them.

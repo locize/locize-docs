@@ -8,5 +8,6 @@
 
 ## More
 
+* [Additional Services](additional-services.md)
 * [FAQ](faq.md)
 
