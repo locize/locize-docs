@@ -8,7 +8,7 @@ Head over to our app and [register](https://www.locize.io/register). Create your
 
 ## Step 2) Decide for a i18n instrumentation
 
-For static websites, smaller webapplications we recommend using our oneliner script locizify. It's the simplest way to get started and needs just a small change of your code:
+For static websites, smaller webapplications we recommend using our one-liner script locizify. It's the simplest way to get started and needs just a small change of your code:
 
 - **locizify** [learn more](/integration-locizify.md)
 

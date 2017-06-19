@@ -34,7 +34,7 @@ $ curl -X GET https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/product
 # }
 ```
 
-(You can find your projectId in your project settings under the API Tab.)
+*(You can find your projectId in your project settings under the API Tab.)*
 
 {% endmethod %}
 
@@ -86,7 +86,7 @@ $ curl -X GET https://api.locize.io/languages/3d0aa5aa-4660-4154-b6d9-907dbef10b
 # }
 ```
 
-(You can find your projectId in your project settings under the API Tab.)
+*(You can find your projectId in your project settings under the API Tab.)*
 
 {% endmethod %}
 
@@ -118,7 +118,7 @@ EOF
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" -d $body https://api.locize.io/missing/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
 ```
 
-(You can find your projectId and API Key in your project settings under the API Tab.)
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
 
 {% endmethod %}
 
@@ -150,7 +150,7 @@ EOF
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" -d $body https://api.locize.io/update/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
 ```
 
-(You can find your projectId and API Key in your project settings under the API Tab.)
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
 
 {% endmethod %}
 
@@ -200,7 +200,7 @@ $ curl -X GET https://api.locize.io/download/3d0aa5aa-4660-4154-b6d9-907dbef10bb
 # ]
 ```
 
-(You can find your projectId in your project settings under the API Tab.)
+*(You can find your projectId in your project settings under the API Tab.)*
 
 {% endmethod %}
 
@@ -224,6 +224,6 @@ This is easy. It's a HTTP POST request without body with this url pattern:
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" https://api.locize.io/copy/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/version/latest/production
 ```
 
-(You can find your projectId and API Key in your project settings under the API Tab.)
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
 
 {% endmethod %}
