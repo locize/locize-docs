@@ -19,8 +19,6 @@ It's a simple HTTP GET request with this url pattern:
 
 ##### example:
 
-{% sample lang="bash" %}
-
 ```bash
 $ curl -X GET https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/landingpage
 # will return something like:
@@ -50,8 +48,6 @@ It's an even simpler HTTP GET request with this url pattern:
 `https://api.locize.io/languages/{projectId}`
 
 ##### example:
-
-{% sample lang="bash" %}
 
 ```bash
 $ curl -X GET https://api.locize.io/languages/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
@@ -104,8 +100,6 @@ This is a little bit more advanced. It's a HTTP POST request with this url patte
 
 ##### example:
 
-{% sample lang="bash" %}
-
 ```bash
 $ body=$(cat  << EOF
 {
@@ -135,8 +129,6 @@ This is also a little bit more advanced. It's a HTTP POST request with this url 
 
 ##### example:
 
-{% sample lang="bash" %}
-
 ```bash
 $ body=$(cat  << EOF
 {
@@ -165,8 +157,6 @@ If you need an overview of all published translation files of your project, you 
 {namespace}, {language} and {version} are optional and are used as filter.
 
 ##### example:
-
-{% sample lang="bash" %}
 
 ```bash
 $ curl -X GET https://api.locize.io/download/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
@@ -217,8 +207,6 @@ This is easy. It's a HTTP POST request without body with this url pattern:
 `https://api.locize.io/copy/{projectId}/version/{fromVersion}/{toVersion}`
 
 ##### example:
-
-{% sample lang="bash" %}
 
 ```bash
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" https://api.locize.io/copy/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/version/latest/production
