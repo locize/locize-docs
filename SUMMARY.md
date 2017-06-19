@@ -8,6 +8,7 @@
 
 ## More
 
+* [InContext Editor](incontext-editor.md)
 * [Versioning](versioning.md)
 * [Namespaces](namespaces.md)
 * [Caching](caching.md)
