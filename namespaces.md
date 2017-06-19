@@ -27,7 +27,7 @@ More often you don't want to load all the translations upfront or at least reduc
 
 ## Configuration / Usage:
 
-#### locize / i18next
+### locize / i18next
 
 ```js
 locize.init({
@@ -49,7 +49,7 @@ There are advanced options like:
 
 more details: [locize / i18next](http://i18next.com/translate/namespace/)
 
-#### locizify
+### locizify
 
 ```js
 locizify.init({

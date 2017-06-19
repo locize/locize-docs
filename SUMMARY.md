@@ -8,6 +8,7 @@
 
 ## More
 
+* [Versioning](versioning.md)
 * [Namespaces](namespaces.md)
 * [Caching](caching.md)
 * [Additional Services](additional-services.md)
