@@ -2,10 +2,10 @@
 
 ## Integration
 
-* [My Awesome API](README.md)
+* [Getting started](README.md)
 * [API](api.md)
-* [FAQ](faq.md)
 
 ## More
 
 * [FAQ](faq.md)
+
