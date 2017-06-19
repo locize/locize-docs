@@ -8,6 +8,7 @@
 
 ## More
 
+* [Namespaces](namespaces.md)
 * [Caching](caching.md)
 * [Additional Services](additional-services.md)
 * [locize vs. alternatives](locize-vs-alternatives.md)
