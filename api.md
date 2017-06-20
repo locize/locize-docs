@@ -212,6 +212,6 @@ This is easy. It's a HTTP POST request without body with this url pattern:
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" https://api.locize.io/copy/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/version/latest/production
 ```
 
-*(You can find your projectId and API Key in your project settings under the API Tab.)*
+*(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for `{toVersion}`)*
 
 {% endmethod %}
