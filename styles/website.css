@@ -1,28 +1,28 @@
 /* header */
 h1, h2, h3, h4, h5, h6 {
-  color: #00695C;
+  color: #2196f3;
 }
 
 h2, h3, h4, h5, h6 {
-  color: #00796B;
+  color: #2196f3;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   position: relative;
   text-decoration: none;
-  color: #00695C
+  color: #2196f3
 }
 
 h1 a {
-  color: #00695C
+  color: #2196f3
 }
 
 h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #00796B
+  color: #2196f3
 }
 
 .markdown-section a, a, a:active, a:hover, a:focus, a:visited {
-  color: #26A69A;
+  color: #4B8DCE;
 }
 
 h2, h3, h4, h5 {
@@ -44,7 +44,7 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
 
 /* active link in summary */
 .book-summary ul.summary li.active>a {
-    color: #26A69A;
+    color: #15419a;
 }
 
 /* brand */
