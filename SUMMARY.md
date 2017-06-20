@@ -15,6 +15,5 @@
 * [Migrating an i18next project](migrating-an-i18next-project.md)
 * [Additional Services](additional-services.md)
 * [locize vs. alternatives](locize-vs-alternatives.md)
-* [FAQ](faq.md)
 * [Changelog](changelog.md)
 
