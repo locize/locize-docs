@@ -24,7 +24,7 @@ For bigger projects or existing projects you like to migrate over to locize you 
 
 You can add new segments or complete files using the webinterface or the [commandline tool](https://github.com/locize/locize-cli).
 
-![](/assets/addUI.png)
+<img src="/assets/addUI.png" width="80%" />
 
 Using locizify or i18next you can enable the saveMissing option - doing so new segments will automatically added to your project.
 
