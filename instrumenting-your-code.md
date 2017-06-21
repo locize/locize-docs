@@ -14,3 +14,7 @@ Drop one line of code:
 ```
 
 *You can find your projectId and API Key in your projects settings.*
+
+Reload your page and see the phrases ready to translate in your locize project.
+
+Find more details and configuration options on the [github page](https://github.com/locize/locizify).
