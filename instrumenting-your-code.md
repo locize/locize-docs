@@ -6,6 +6,9 @@
 
 Using our locizify script is the simplest way to get your website or webapplication translated. We highly recommend using it on your static site generators like wordpress, shopify, ...
 
+<img src="/assets/img/locizify-frameworks.png" width="80%" />
+
+
 Drop one line of code:
 
 ```js
@@ -25,6 +28,8 @@ Find more details and configuration options on the [github page](https://github.
 ## i18next
 
 You can use locize in combination with i18next. I18next is a well known internationalization framework and offers a wide range of framework integrations and plugins for almost every need.
+
+<img src="/assets/img/i18next-frameworks.png" width="80%" />
 
 [Learn more about i18next](http://i18next.com)
 
