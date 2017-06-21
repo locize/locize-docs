@@ -71,3 +71,10 @@ locizer
     console.log(polyglot.t('some key'));
   });
 ```
+
+For more details checkout [locizer docs](https://github.com/locize/locizer)
+
+Our samples:
+
+- [formatjs](https://github.com/locize/locize-formatjs-example)
+- [polyglot](https://github.com/locize/locize-polyglot-example)
