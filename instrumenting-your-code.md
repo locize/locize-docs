@@ -50,6 +50,8 @@ browser: [Learn more about the browser backend](https://github.com/locize/i18nex
 
 nodejs: [Learn more about the nodejs backend](https://github.com/locize/i18next-node-locize-backend)
 
+Checkout our [samples](https://github.com/locize/locize-examples).
+
 ## other options
 
 ### clientside: polyglot, formatjs, react-intl, messageformat, ...
