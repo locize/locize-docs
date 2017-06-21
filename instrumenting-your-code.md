@@ -49,3 +49,25 @@ i18next
 browser: [Learn more about the browser backend](https://github.com/locize/i18next-locize-backend)
 
 nodejs: [Learn more about the nodejs backend](https://github.com/locize/i18next-node-locize-backend)
+
+## other options
+
+### clientside: polyglot, formatjs, react-intl, messageformat, ...
+
+You can use our locizer script to load translations from locize and add them to your i18n framework in the browser:
+
+Sample for polyglot:
+
+```js
+// <script src="https://unpkg.com/locizer/locizer.min.js"></script>
+locizer
+  .init({
+    fallbackLng: 'en',
+    referenceLng: 'en',
+    projectId: '[your project id]'
+  })
+  .load('translation', function(err, translations, lng) {
+    const polyglot = new Polyglot({ phrases: translations, locale: lng });
+    console.log(polyglot.t('some key'));
+  });
+```
