@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Instrumenting your code
 
 ## locizify
@@ -18,3 +20,32 @@ Drop one line of code:
 Reload your page and see the phrases ready to translate in your locize project.
 
 Find more details and configuration options on the [github page](https://github.com/locize/locizify).
+
+
+## i18next
+
+You can use locize in combination with i18next. I18next is a well known internationalization framework and offers a wide range of framework integrations and plugins for almost every need.
+
+[Learn more about i18next](http://i18next.com)
+
+To connect i18next with the locize service integrate the xhr or node.js backend:
+
+```js
+import i18next from 'i18next';
+import Backend from 'i18next-locize-backend';
+
+i18next
+  .use(Backend)
+  .init({
+    // ...other options
+    backend: {
+      projectId: '[PROJECT_ID]',
+      apiKey: '[API_KEY]',
+      referenceLng: '[LNG]'
+    }
+  });
+```
+
+browser: [Learn more about the browser backend](https://github.com/locize/i18next-locize-backend)
+
+nodejs: [Learn more about the nodejs backend](https://github.com/locize/i18next-node-locize-backend)
