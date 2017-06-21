@@ -80,3 +80,20 @@ Our samples:
 
 - [formatjs](https://github.com/locize/locize-formatjs-example)
 - [polyglot](https://github.com/locize/locize-polyglot-example)
+
+### serverside
+
+For js environments please watch out for the i18next integration options.
+
+On other environments you could use:
+
+- [Our API](/api.md)
+- [Our locize-cli](https://github.com/locize/locize-cli)
+
+### other formats xliff, gettext, ...
+
+You can use following modules to convert between formats:
+
+- [xliff](https://github.com/locize/xliff)
+- [android-string-resource](https://github.com/locize/android-string-resource)
+- [gettext (.mo/.po](https://github.com/i18next/i18next-gettext-converter)
