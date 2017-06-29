@@ -59,7 +59,7 @@ Checkout our [samples](https://github.com/locize/locize-examples).
 
 ## other options
 
-### clientside: polyglot, formatjs, react-intl, messageformat, ...
+### clientside: polyglot, formatjs, react-intl, js-lingui, messageformat, ...
 
 You can use our locizer script to load translations from locize and add them to your i18n framework in the browser:
 
@@ -85,6 +85,7 @@ Our samples:
 
 - [formatjs](https://github.com/locize/locize-formatjs-example)
 - [polyglot](https://github.com/locize/locize-polyglot-example)
+- [js-lingui](https://github.com/locize/locize-js-lingui-example)
 
 ### serverside
 
