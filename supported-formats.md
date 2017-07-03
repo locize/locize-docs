@@ -158,7 +158,7 @@ Format used on Android.
   <string name="label.cancel">cancel</string>
   <string name="label.save">save</string>
 </resources>
-``
+```
 
 
 
