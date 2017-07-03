@@ -6,6 +6,7 @@
 * [Instrumenting your code](instrumenting-your-code.md)
 * [API](api.md)
 * [CLI](cli.md)
+* [Supported Formats](supported-formats.md)
 
 ## More
 
