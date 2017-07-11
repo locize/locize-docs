@@ -4,11 +4,11 @@
 
 We work on extending the list of formats supported. If you need a format and can't find it here send us an [email](mailto:support@locize.com).
 
-## Import
+## Import / Export
 
 ### JSON nested
 
-JSON format nested by keys separated by `.`:
+Will import / export in JSON format nesting keys separated by `.`:
 
 ```json
 {
@@ -22,48 +22,7 @@ JSON format nested by keys separated by `.`:
 
 ### JSON flatten
 
-JSON format flatten - ignoring `.` separation:
-
-```json
-{
-  "appName": "locize.com - localization as a service",
-  "label.cancel": "cancel",
-  "label.save": "save"
-}
-```
-
-### CSV
-
-Comma separated values - optimal reusing the previously exported files including added translations.
-
-```txt
-"key","de","en"
-"appName","locize.com - Lokalisierung als Service","locize.com - localization as a service"
-"label.cancel","abbrechen","cancel"
-"label.save","speichern","save"
-```
-
-
-
-## Export
-
-### JSON nested
-
-Will export in JSON format nesting keys separated by `.`:
-
-```json
-{
-  "appName": "locize.com - localization as a service",
-  "label": {
-    "cancel": "cancel",
-    "save": "save"
-  }
-}
-```
-
-### JSON flatten
-
-Will export in JSON format flat ignoring `.` separation:
+Will import / export in JSON format flat ignoring `.` separation:
 
 ```json
 {
@@ -76,6 +35,9 @@ Will export in JSON format flat ignoring `.` separation:
 ### CSV
 
 Exports reference language and target language in one file. This format is also supported for imports and is an option to send translations to freelancers not supporting xliff or other formats.
+
+For optimal import reuse the previously exported files including added translations.
+
 
 ```txt
 "key","de","en"
