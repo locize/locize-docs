@@ -129,6 +129,8 @@ This is also a little bit more advanced. It's a HTTP POST request with this url 
 
 `https://api.locize.io/update/{projectId}/{version}/{language}/{namespace}`
 
+To completely replace a namespace set the query parameter `replace` to true. This will empty the namespace before saving the new translations.
+
 ##### example:
 
 ```bash
@@ -142,6 +144,10 @@ EOF
 )
 
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" -d $body https://api.locize.io/update/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
+
+$ # or:
+$ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" -d $body https://api.locize.io/update/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage?replace=true
+
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
