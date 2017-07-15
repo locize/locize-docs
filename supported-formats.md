@@ -122,6 +122,32 @@ Format used on Android.
 </resources>
 ```
 
+### Gettext po files
+
+Format used on Android.
+
+```po
+msgid ""
+msgstr ""
+"Project-Id-Version: locize: My project - translations\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"POT-Creation-Date: 2017-07-14T22:26:46.631Z\n"
+"PO-Revision-Date: 2017-07-14T22:26:46.631Z\n"
+"Language: it\n"
+
+msgid "title"
+msgstr "La soluzione migliore per il miglior cliente!"
+
+msgid "description"
+msgstr ""
+"S est Lorem ipsum dolor sit amet. Il cammino è morto, a duo dolores ed a "
+"rebum. Stet clita kasd gubergren, senza mare incontro sanctus est Lorem "
+"ipsum dolor sit amet."
+```
+
 
 
 
