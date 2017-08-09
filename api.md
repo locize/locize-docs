@@ -114,6 +114,10 @@ EOF
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" -d $body https://api.locize.io/missing/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
 ```
 
+***Advice:***
+- *Translations not defined in your reference language will not be shown in the locize app.*
+- *You should post missing translation to the reference language first!*
+
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
 {% endmethod %}
