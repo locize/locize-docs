@@ -227,3 +227,24 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mys
 *(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for `{toVersion}`)*
 
 {% endmethod %}
+
+
+
+## Publish version
+{% method %}
+
+If you want to fully automate your CI/CD pipeline by publishing a version exactly at the same time when you deploy a new version of your product this api call is exactly what you are looking for.
+
+This is very easy. It's a HTTP POST request without body with this url pattern:
+
+`https://api.locize.io/publish/{projectId}/{version}`
+
+##### example:
+
+```bash
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" https://api.locize.io/publish/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for the correct `{version}`)*
+
+{% endmethod %}
