@@ -17,7 +17,7 @@ In the settings you can:
 - enable / disable the service
 - add / remove projects which should be used as translation memory source
 
-<img src="/assets/img/translationmemory.png" width="80%" />
+<img src="/assets/img/translationmemory_config.png" width="80%" />
 
 
 # reload the translation memory
@@ -35,7 +35,7 @@ If there were a lot of changes and you like to reload your cache you can use the
 
 When enabled you will see a "TM Lookup" button on every segment (bottom center). Clicking it will enable a translation memory lookup for this segments.
 
-<img src="/assets/img/translationmemory_consistency.png" width="80%" />
+<img src="/assets/img/translationmemory.png" width="80%" />
 
 
 
