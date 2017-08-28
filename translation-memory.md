@@ -51,4 +51,8 @@ On every match you will find:
 
 In the translation memory search field you can enter any text you like. This way you can easily lookup single words and check if the translations use the same terminology all over the places.
 
-[IMAGE]
+<img src="/assets/img/translationmemory_consistency.png" width="80%" />
+
+
+Compare the translation for intership in german - once translated as "praktika" and another time as "praktikum". Just follow the link to source and fix that inconsistency.
+
