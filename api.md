@@ -1,4 +1,5 @@
-<!-- toc -->
+<
+!-- toc -->
 
 # API
 
@@ -25,12 +26,12 @@ It's a simple HTTP GET request with this url pattern:
 $ curl -X GET https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/landingpage
 # will return something like:
 # {
-#   "Average App": "Average App",
-#   "Benefits": "Benefits",
-#   "Blog": "Blog",
-#   ...
-#   "privacy policy": "privacy policy",
-#   "terms of service": "terms of service"
+# "Average App": "Average App",
+# "Benefits": "Benefits",
+# "Blog": "Blog",
+# ...
+# "privacy policy": "privacy policy",
+# "terms of service": "terms of service"
 # }
 ```
 
@@ -55,32 +56,32 @@ It's an even simpler HTTP GET request with this url pattern:
 $ curl -X GET https://api.locize.io/languages/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
 # will return something like:
 # {
-#   "en": {
-#     "name": "English",
-#     "nativeName": "English",
-#     "translated": {
-#       "latest": 1,
-#       "production": 1
-#     }
-#   },
-#   "de-CH": {
-#     "name": "German",
-#     "nativeName": "Deutsch",
-#     "region": "CH",
-#     "translated": {
-#       "latest": 1,
-#       "production": 0.521
-#     }
-#   },
-#   "it": {
-#     "name": "Italian",
-#     "nativeName": "Italiano",
-#     "translated": {
-#       "latest": 1,
-#       "production": 1
-#     }
-#   },
-#   ...
+# "en": {
+# "name": "English",
+# "nativeName": "English",
+# "translated": {
+# "latest": 1,
+# "production": 1
+# }
+# },
+# "de-CH": {
+# "name": "German",
+# "nativeName": "Deutsch",
+# "region": "CH",
+# "translated": {
+# "latest": 1,
+# "production": 0.521
+# }
+# },
+# "it": {
+# "name": "Italian",
+# "nativeName": "Italiano",
+# "translated": {
+# "latest": 1,
+# "production": 1
+# }
+# },
+# ...
 # }
 ```
 
@@ -103,15 +104,15 @@ This is a little bit more advanced. It's a HTTP POST request with this url patte
 ##### example:
 
 ```bash
-$ body=$(cat  << EOF
+$ body=$(cat << EOF
 {
-    "new.key": "default value",
-    "another.new.key": "another default value"
+"new.key": "default value",
+"another.new.key": "another default value"
 }
 EOF
 )
 
-$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" -d $body https://api.locize.io/missing/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/missing/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
 ```
 
 ***Advice:***
@@ -138,19 +139,19 @@ To completely replace a namespace set the query parameter `replace` to true. Thi
 ##### example:
 
 ```bash
-$ body=$(cat  << EOF
+$ body=$(cat << EOF
 {
-    "new.key": "default value",
-    "another.existing.key": "another changed value",
-    "a.key.to.delete": null
+"new.key": "default value",
+"another.existing.key": "another changed value",
+"a.key.to.delete": null
 }
 EOF
 )
 
-$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" -d $body https://api.locize.io/update/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/update/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
 
 $ # or:
-$ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" -d $body https://api.locize.io/update/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage?replace=true
+$ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/update/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage?replace=true
 
 ```
 
@@ -174,31 +175,31 @@ If you need an overview of all published translation files of your project, you 
 $ curl -X GET https://api.locize.io/download/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
 # will return something like:
 # [
-#   {
-#     "url": "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/common",
-#     "key": "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/common"
-#   },
-#   {
-#     url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/landingpage",
-#     key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/landingpage"
-#   },
-#   {
-#     url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common",
-#     key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common"
-#   },
-#   {
-#     url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common",
-#     key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common"
-#   },
-#   ...
-#   {
-#     url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common",
-#     key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common"
-#   },
-#   {
-#     url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common",
-#     key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common"
-#   }
+# {
+# "url": "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/common",
+# "key": "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/common"
+# },
+# {
+# url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/landingpage",
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/landingpage"
+# },
+# {
+# url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common",
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common"
+# },
+# {
+# url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common",
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common"
+# },
+# ...
+# {
+# url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common",
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common"
+# },
+# {
+# url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common",
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common"
+# }
 # ]
 ```
 
@@ -221,7 +222,7 @@ This is easy. It's a HTTP POST request without body with this url pattern:
 ##### example:
 
 ```bash
-$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" https://api.locize.io/copy/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/version/latest/production
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/copy/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/version/latest/production
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for `{toVersion}`)*
@@ -242,7 +243,7 @@ This is very easy. It's a HTTP POST request without body with this url pattern:
 ##### example:
 
 ```bash
-$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer mysecret-very-4f2e-b123-d432d86430c6" https://api.locize.io/publish/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/publish/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for the correct `{version}`)*
