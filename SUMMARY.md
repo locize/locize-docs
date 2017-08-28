@@ -10,6 +10,7 @@
 
 ## More
 
+* [Translation Memory](translation-memory.md)
 * [InContext Editor](incontext-editor.md)
 * [Versioning](versioning.md)
 * [Namespaces](namespaces.md)
