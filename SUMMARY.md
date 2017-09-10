@@ -16,4 +16,5 @@
 * [Namespaces](namespaces.md)
 * [Caching](caching.md)
 * [Migrating an i18next project](migrating-an-i18next-project.md)
+* [Notifications](notifications.md)
 
