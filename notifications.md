@@ -14,6 +14,7 @@ And finally choose a channel to send new notifications to:
 
 <img src="/assets/img/services/slack_2.png" width="80%" />
 
+More information on [Slack App Directory](https://inweso.slack.com/apps/A71NM84Q6-locize)
 
 
 
