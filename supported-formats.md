@@ -124,7 +124,7 @@ Format used on Android.
 
 ### Gettext po files
 
-Format used on Android.
+Gettext standard format.
 
 ```po
 msgid ""
