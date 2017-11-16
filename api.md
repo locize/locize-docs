@@ -248,3 +248,82 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 *(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for the correct `{version}`)*
 
 {% endmethod %}
+
+
+
+---
+
+
+>Sometimes you want to automate even more. I.e if you want to create your own translation management ui.
+> The following endpoints are probably what you are looking for.
+
+
+## Create a new namespace
+{% method %}
+
+`https://api.locize.io/create/{projectId}/{version}/{language}/{namespace}`
+
+A body containing initial values is optional.
+
+##### example:
+
+```bash
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/create/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+{% endmethod %}
+
+
+
+## Rename a namespace in all languages
+{% method %}
+
+`https://api.locize.io/rename/{projectId}/{version}/{fromNamespace}/{toNamespace}`
+
+
+##### example:
+
+```bash
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/rename/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/landingpage/landingpagenew
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+{% endmethod %}
+
+
+
+## Add new language
+{% method %}
+
+`https://api.locize.io/language/{projectId}/{language}`
+
+
+##### example:
+
+```bash
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/language/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/en
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+{% endmethod %}
+
+
+## Remove language
+{% method %}
+
+`https://api.locize.io/language/{projectId}/{language}`
+
+
+##### example:
+
+```bash
+$ curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/language/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/en
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+{% endmethod %}
