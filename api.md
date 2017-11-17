@@ -333,6 +333,7 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 {% endmethod %}
 
 
+
 ## Remove language
 {% method %}
 
@@ -343,6 +344,55 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 ```bash
 $ curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/language/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/en
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+{% endmethod %}
+
+
+
+## Invite new users
+{% method %}
+
+`https://api.locize.io/invite/{projectId}`
+
+The body contains
+- **email** the user's email address
+- **role** can be `"user"` or `"admin"` (default: `"user"`)
+- **scope** is an object describing a scope restriction (default: empty arrays for languages and versions)
+
+To skip sending the email automatically set the query parameter `send` to false. This will not send any email. This way you can send the invitation mail by your own, if you want to.
+
+
+
+
+
+##### example:
+
+```bash
+$ body=$(cat << EOF
+{
+"email": "new.user@somewhere-in-the-universe.com",
+"role": "user",
+"scope": {
+"languages": ["en","de"],
+"versions": ["latest","preprod"]
+}
+}
+EOF
+)
+
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/invite/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
+$ # or:
+$ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/invite/3d0aa5aa-4660-4154-b6d9-907dbef10bb2?send=false
+# will return something like:
+# {
+# "code": "LL4mHDzyxKn4cKYP",
+# "role": "user",
+# "email": "new.user@somewhere-in-the-universe.com",
+# "scope": {"languages":["en","de"],"versions":["latest","preprod"]}
+# }
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
