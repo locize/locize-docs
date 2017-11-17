@@ -295,6 +295,27 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 
 
+
+
+## Delete a namespace from all languages
+{% method %}
+
+`https://api.locize.io/delete/{projectId}/{version}/{namespace}`
+
+
+##### example:
+
+```bash
+$ curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/delete/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/landingpage
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+{% endmethod %}
+
+
+
+
 ## Add new language
 {% method %}
 
