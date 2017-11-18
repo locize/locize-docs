@@ -391,7 +391,8 @@ $ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <
 # "code": "LL4mHDzyxKn4cKYP",
 # "role": "user",
 # "email": "new.user@somewhere-in-the-universe.com",
-# "scope": {"languages":["en","de"],"versions":["latest","preprod"]}
+# "scope": {"languages":["en","de"],"versions":["latest","preprod"]},
+# "link": "https://www.locize.io/register?invitation=LL4mHDzyxKn4cKYP"
 # }
 ```
 
