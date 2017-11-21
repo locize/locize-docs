@@ -10,15 +10,12 @@ No problem! If you want to make a low level integration or just did not found an
 - [Locizer (Browser)](https://github.com/locize/locizer)
 
 ## Fetch the namespace resources
-{% method %}
 
 The most important feature first!
 
 It's a simple HTTP GET request with this url pattern:
 
 `https://api.locize.io/{projectId}/{version}/{language}/{namespace}`
-
-{% sample lang="bash" %}
 
 ##### example:
 
@@ -36,8 +33,6 @@ $ curl -X GET https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/product
 ```
 
 *(You can find your projectId in your project settings under the API Tab.)*
-
-{% endmethod %}
 
 
 ## Fetch the available languages
