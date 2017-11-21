@@ -18,7 +18,7 @@ It's a simple HTTP GET request with this url pattern:
 
 `https://api.locize.io/{projectId}/{version}/{language}/{namespace}`
 
-{% sample lang="sh" %}
+{% sample lang="bash" %}
 
 ##### example:
 
