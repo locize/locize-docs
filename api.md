@@ -83,7 +83,6 @@ $ curl -X GET https://api.locize.io/languages/3d0aa5aa-4660-4154-b6d9-907dbef10b
 
 
 ## Missing translations
-{% method %}
 
 You can say to locize that some translations are missing.
 For example this is very useful in development.
@@ -113,11 +112,8 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
-{% endmethod %}
-
 
 ## Update/Remove translations
-{% method %}
 
 You can say to locize that some translations should be updated or deleted.
 For example this is very useful for an integration from an other already existing system to slowly transition the translations to locize.
@@ -149,11 +145,8 @@ $ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
-{% endmethod %}
-
 
 ## List all namespace resources
-{% method %}
 
 If you need an overview of all published translation files of your project, you can do this with a simple HTTP GET request with this url pattern:
 
@@ -197,12 +190,9 @@ $ curl -X GET https://api.locize.io/download/3d0aa5aa-4660-4154-b6d9-907dbef10bb
 
 *(You can find your projectId in your project settings under the API Tab.)*
 
-{% endmethod %}
-
 
 
 ## Copy version
-{% method %}
 
 If you are using multiple versions of your translations you can ask locize to copy (replace) all translations from one version to the other.
 For example this is very useful when you release your translation files from one version to the other via your custom tooling.
@@ -219,12 +209,9 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 *(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for `{toVersion}`)*
 
-{% endmethod %}
-
 
 
 ## Publish version
-{% method %}
 
 If you want to fully automate your CI/CD pipeline by publishing a version exactly at the same time when you deploy a new version of your product this api call is exactly what you are looking for.
 
@@ -240,8 +227,6 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 *(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for the correct `{version}`)*
 
-{% endmethod %}
-
 
 
 ---
@@ -252,7 +237,6 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 
 ## Create a new namespace
-{% method %}
 
 `https://api.locize.io/create/{projectId}/{version}/{language}/{namespace}`
 
@@ -266,12 +250,9 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
-{% endmethod %}
-
 
 
 ## Rename a namespace in all languages
-{% method %}
 
 `https://api.locize.io/rename/{projectId}/{version}/{fromNamespace}/{toNamespace}`
 
@@ -284,14 +265,11 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
-{% endmethod %}
-
 
 
 
 
 ## Delete a namespace from all languages
-{% method %}
 
 `https://api.locize.io/delete/{projectId}/{version}/{namespace}`
 
@@ -304,13 +282,10 @@ $ curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer <
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
-{% endmethod %}
-
 
 
 
 ## Add new language
-{% method %}
 
 `https://api.locize.io/language/{projectId}/{language}`
 
@@ -323,12 +298,9 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
-{% endmethod %}
-
 
 
 ## Remove language
-{% method %}
 
 `https://api.locize.io/language/{projectId}/{language}`
 
@@ -341,12 +313,9 @@ $ curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer <
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
-{% endmethod %}
-
 
 
 ## Invite new users
-{% method %}
 
 `https://api.locize.io/invite/{projectId}`
 
@@ -390,5 +359,3 @@ $ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
-
-{% endmethod %}
