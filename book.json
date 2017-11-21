@@ -11,6 +11,10 @@
                     "lang": "js",
                     "name": "js",
                     "default": true
+                },
+                {
+                    "lang": "bash",
+                    "name": "bash"
                 }
             ],
             "split": true
