@@ -36,7 +36,6 @@ $ curl -X GET https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/product
 
 
 ## Fetch the available languages
-{% method %}
 
 You have the possibility to ask locize which languages are available for a particular project.
 That way you can have a dynamic language selector.
@@ -81,8 +80,6 @@ $ curl -X GET https://api.locize.io/languages/3d0aa5aa-4660-4154-b6d9-907dbef10b
 ```
 
 *(You can find your projectId in your project settings under the API Tab.)*
-
-{% endmethod %}
 
 
 ## Missing translations
