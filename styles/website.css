@@ -30,6 +30,9 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .markdown-section h2 {
   font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: .45em;
+  font-weight: 300;
 }
 
 .markdown-section h3 {
@@ -41,7 +44,6 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
   margin-bottom: .35em;
   font-weight: 300;
 }
-
 
 
 .markdown-section a, a, a:active, a:hover, a:focus, a:visited {
