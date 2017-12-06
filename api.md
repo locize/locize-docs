@@ -1,6 +1,6 @@
 <!-- toc -->
 
-<div class="api-section"></div>
+<div class="api-section">
 
 
 # API
