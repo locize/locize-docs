@@ -192,6 +192,39 @@ $ curl -X GET https://api.locize.io/download/3d0aa5aa-4660-4154-b6d9-907dbef10bb
 
 
 
+## Fetch/filter the (unpublished) namespace resources
+
+Sometimes in your localization process you want to know which are the translations that are approved by your reviewer.
+Assuming you have defined some tags to mark translations as approved, with this api you're able to filter by these tags.
+
+This is pretty easy. It's a simple HTTP GET request with this url pattern:
+
+`https://api.locize.io/pull/{projectId}/{version}/{language}/{namespace}`
+
+with positive tags filter: `https://api.locize.io/pull/{projectId}/{version}/{language}/{namespace}?tags=[0,2]` (you need to pass the tag index)
+
+in combination with a negative tags filter: `https://api.locize.io/pull/{projectId}/{version}/{language}/{namespace}?tags=[0,2]&!tags=[1]`
+
+
+Another use case could be to track the amount of words changed during a time period.
+To do this, you can pull the translations at period 1, save this state and the current timestamp and later at period 2 you can pull again with an additional filter.
+
+i.e. get all translations updated after 2017-12-06T19:42:18.139Z (UTC): `https://api.locize.io/pull/{projectId}/{version}/{language}/{namespace}?updatedAt=>1512589338139` (number of milliseconds since 1970/01/01)
+
+i.e. get all translations updated before 2017-12-06T19:42:18.139Z (UTC): `https://api.locize.io/pull/{projectId}/{version}/{language}/{namespace}?updatedAt=<1512589338139`
+
+
+##### example:
+
+```bash
+$ curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/pull/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+
+
+
 ## Copy version
 
 If you are using multiple versions of your translations you can ask locize to copy (replace) all translations from one version to the other.
