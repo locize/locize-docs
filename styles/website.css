@@ -25,6 +25,7 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
   font-size: 1.4em;
   margin-top: 0.85em;
   margin-bottom: .45em;
+  font-weight: 300;
 }
 
 .markdown-section h2 {
@@ -38,6 +39,7 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
 .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h2 {
   margin-top: 0.65em;
   margin-bottom: .25em;
+  font-weight: 300;
 }
 
 
