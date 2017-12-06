@@ -192,6 +192,7 @@ $ curl -X GET https://api.locize.io/download/3d0aa5aa-4660-4154-b6d9-907dbef10bb
 
 
 
+
 ## Fetch/filter the (unpublished) namespace resources
 
 Sometimes in your localization process you want to know which are the translations that are approved by your reviewer.
