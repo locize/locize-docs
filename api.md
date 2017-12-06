@@ -1,5 +1,7 @@
 <!-- toc -->
 
+<div class="api">
+
 # API
 
 Do you prefer to integrate the locize api on your own?
@@ -359,3 +361,8 @@ $ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+
+
+</div>
+
