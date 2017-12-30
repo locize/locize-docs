@@ -113,6 +113,33 @@ $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <AP
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
 
+## Used translations
+
+You can say to locize which translations are used. Locize will then remember at which time the translations have been last used.
+For example this is very useful in development.
+For example during an e2e test you can spot which translations are probably not used anymore.
+
+This is also a HTTP POST request, with this url pattern:
+
+`https://api.locize.io/used/{projectId}/{version}/{language}/{namespace}`
+
+##### example:
+
+```bash
+$ body=$(cat << EOF
+[
+"new.key",
+"another.new.key"
+]
+EOF
+)
+
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/used/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+
 ## Update/Remove translations
 
 You can say to locize that some translations should be updated or deleted.
