@@ -76,7 +76,6 @@ All messages will have the following structure:
       },
       "link":"https://www.locize.io/p/albo6dxk/v/latest"
    }
-
 }
 ```
 
@@ -103,7 +102,6 @@ All messages will have the following structure:
       },
       "link":"https://www.locize.io/p/albo6dxk/v/latest"
    }
-
 }
 ```
 
@@ -130,7 +128,6 @@ All messages will have the following structure:
       },
       "link":"https://www.locize.io/p/albo6dxk/v/latest"
    }
-
 }
 ```
 
@@ -157,7 +154,6 @@ All messages will have the following structure:
       },
       "link":"https://www.locize.io/p/albo6dxk/v/latest"
    }
-
 }
 ```
 
@@ -185,7 +181,6 @@ All messages will have the following structure:
       },
       "link":"https://www.locize.io/p/albo6dxk/v/latest"
    }
-
 }
 ```
 
