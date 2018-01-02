@@ -5,6 +5,7 @@
 * [Getting started](README.md)
 * [Instrumenting your code](instrumenting-your-code.md)
 * [API](api.md)
+* [Webhook](webhook.md)
 * [CLI](cli.md)
 * [Supported Formats](supported-formats.md)
 
