@@ -185,22 +185,228 @@ All messages will have the following structure:
 ```
 
 ## orderCreated
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"orderCreated",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"William Timberland created a translation order with gengo!",
+   "payload":{
+      "service":"gengo"
+   },
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "user":{
+         "id":"ab075147-c7a3-45d2-9b24-739ae2ed948a",
+         "firstname":"William",
+         "lastname":"Timberland"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/v/latest"
+   }
+}
+```
 
 ## orderCompleted
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"orderCompleted",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"gengo order completed!",
+   "payload":{
+      "service":"gengo"
+   },
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/orders"
+   }
+}
+```
 
 ## invitationAccepted
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"invitationAccepted",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"William Timberland accepted the invitation and is now part of your project!",
+   "payload":{},
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "user":{
+         "id":"ab075147-c7a3-45d2-9b24-739ae2ed948a",
+         "firstname":"William",
+         "lastname":"Timberland"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/v/latest"
+   }
+}
+```
 
 ## versionPublished
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"versionPublished",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"William Timberland published version prod!",
+   "payload":{
+      "version":"prod"
+   },
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "user":{
+         "id":"ab075147-c7a3-45d2-9b24-739ae2ed948a",
+         "firstname":"William",
+         "lastname":"Timberland"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/v/prod"
+   }
+}
+```
 
 ## versionOverwrote
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"versionOverwrote",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"William Timberland overwrote version prod with test!",
+   "payload":{
+      "from":"test",
+      "to":"prod"
+   },
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "user":{
+         "id":"ab075147-c7a3-45d2-9b24-739ae2ed948a",
+         "firstname":"William",
+         "lastname":"Timberland"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/v/prod"
+   }
+}
+```
 
 ## namespaceAdded
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"namespaceAdded",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"William Timberland added namespace landingpage in version latest!",
+   "payload":{
+      "namespace":"landingpage",
+      "version":"latest"
+   },
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "user":{
+         "id":"ab075147-c7a3-45d2-9b24-739ae2ed948a",
+         "firstname":"William",
+         "lastname":"Timberland"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/v/latest"
+   }
+}
+```
 
 ## namespaceDeleted
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"namespaceDeleted",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"William Timberland removed namespace landingpage in version latest!",
+   "payload":{
+      "namespace":"landingpage",
+      "version":"latest"
+   },
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "user":{
+         "id":"ab075147-c7a3-45d2-9b24-739ae2ed948a",
+         "firstname":"William",
+         "lastname":"Timberland"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/v/latest"
+   }
+}
+```
 
 ## namespaceCompleted
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"namespaceCompleted",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"Translation of namespace landingpage in language en for version latest completed!",
+   "payload":{
+      "namespace":"landingpage",
+      "language":"en",
+      "version":"latest"
+   },
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/v/latest"
+   }
+}
+```
 
 ## namespaceNotCompletedAnymore
+```json
+{
+   "id":"427cc4dd-adf5-4fb8-ad8d-8508f2788fe3",
+   "name":"namespaceNotCompletedAnymore",
+   "occurredAt":"2018-01-02T21:27:11.326Z",
+   "message":"New segments of namespace landingpage ready to be translated in language en for version latest!",
+   "payload":{
+      "namespace":"landingpage",
+      "language":"en",
+      "version":"latest"
+   },
+   "meta":{
+      "project":{
+         "id":"23dad587-b3bf-4663-b15c-ad8d66213ac6",
+         "name":"THIS PROJECT",
+         "slug":"albo6dxk"
+      },
+      "link":"https://www.locize.io/p/albo6dxk/v/latest"
+   }
+}
+```
 
 
 
