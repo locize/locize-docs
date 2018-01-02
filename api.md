@@ -253,6 +253,33 @@ $ curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer <API
 
 
 
+
+
+## Fetch configured project tags 
+
+You may have defined some tags to mark translations as approved, etc. With this api you're able to fetch these tags.
+
+A very simple HTTP GET request with this url pattern:
+
+`https://api.locize.io/tags/{projectId}`
+
+##### example:
+
+```bash
+$ curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/tags/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
+# will return something like:
+# [
+# "translated",
+# "reviewed",
+# "approved"
+# ]
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+
+
+
 ## Copy version
 
 If you are using multiple versions of your translations you can ask locize to copy (replace) all translations from one version to the other.
@@ -399,9 +426,9 @@ $ body=$(cat << EOF
 "email": "new.user@somewhere-in-the-universe.com",
 "role": "user",
 "scope": {
-"languages": ["en","de"],
-"versions": ["latest","preprod"]
-}
+ "languages": ["en","de"],
+ "versions": ["latest","preprod"]
+ }
 }
 EOF
 )
@@ -414,12 +441,270 @@ $ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <
 # "code": "LL4mHDzyxKn4cKYP",
 # "role": "user",
 # "email": "new.user@somewhere-in-the-universe.com",
-# "scope": {"languages":["en","de"],"versions":["latest","preprod"]},
+# "scope": {
+#  "languages":["en","de"],
+#  "versions":["latest","preprod"]
+# },
 # "link": "https://www.locize.io/register?invitation=LL4mHDzyxKn4cKYP"
 # }
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
+
+
+
+
+## Fetch users
+
+For example when you want to build your own translation management ui, this endpoint will be very useful if you want to display the project's users.
+
+Just a HTTP GET request with this url pattern:
+
+`https://api.locize.io/users/{projectId}`
+
+##### example:
+
+```bash
+$ curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/users/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
+# will return something like:
+# [
+#  {
+#   "id":"ba175147-c7a3-45d2-9b24-739ae2ed948c",
+#   "firstname": "George",
+#   "lastname": "Winston",
+#   "username": "gg.win",
+#   "email": "george.user@somewhere-in-the-universe.com",
+#   "role": "user",
+#   "scope": {
+#    "languages": ["en","de"],
+#    "versions": ["latest","preprod"]
+#   }
+#  }
+#  ...
+# ]
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+
+
+
+
+## Statistics: project
+
+Do you want to show some cool overview images like this:
+![](/assets/img/project_stats.png)
+
+
+You can access the same data we use on the locize-client also for your own ui.
+
+Simply make a HTTP GET request with this url pattern:
+
+`https://api.locize.io/stats/project/{projectId}`
+
+##### example:
+
+```bash
+$ curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/stats/project/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
+# will return something like:
+# {
+#    "latest":{
+#       "en":{
+#          "ns1":{
+#             "translated":1,
+#             "untranslated":0,
+#             "ordered":0,
+#             "segmentsTranslated":10,
+#             "segmentsTotal":10
+#          },
+#          "anotherNamespace":{
+#             "translated":1,
+#             "untranslated":0,
+#             "ordered":0,
+#             "segmentsTranslated":1,
+#             "segmentsTotal":1
+#          }
+#       },
+#       "de":{
+#          "ns1":{
+#             "translated":0.7,
+#             "untranslated":0.3,
+#             "ordered":0,
+#             "segmentsTranslated":7,
+#             "segmentsTotal":10
+#          },
+#          "anotherNamespace":{
+#             "translated":1,
+#             "untranslated":0,
+#             "ordered":0,
+#             "segmentsTranslated":1,
+#             "segmentsTotal":1
+#          }
+#       }
+#    },
+#    "prod":{
+#       "en":{
+#          "ns1":{
+#             "translated":1,
+#             "untranslated":0,
+#             "ordered":0,
+#             "segmentsTranslated":5,
+#             "segmentsTotal":5
+#          },
+#          "anotherNamespace":{
+#             "translated":1,
+#             "untranslated":0,
+#             "ordered":0,
+#             "segmentsTranslated":1,
+#             "segmentsTotal":1
+#          }
+#       },
+#       "de":{
+#          "ns1":{
+#             "translated":1,
+#             "untranslated":0,
+#             "ordered":0,
+#             "segmentsTranslated":5,
+#             "segmentsTotal":5
+#          },
+#          "anotherNamespace":{
+#            "translated":0.7142857142857143,
+#            "untranslated":0.2857142857142857,
+#            "ordered":0,
+#            "segmentsTranslated":5,
+#            "segmentsTotal":7
+#          }
+#       }
+#    }
+# }
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
+
+
+
+
+## Statistics: user
+
+There are some nice statistics for users too:
+
+
+Another HTTP GET request with this url pattern:
+
+for a specific user:
+`https://api.locize.io/stats/user/{projectId}/{userId}`
+`https://api.locize.io/stats/user/{projectId}/{userId}?year=2018`
+
+or for all users:
+`https://api.locize.io/stats/users/{projectId}`
+`https://api.locize.io/stats/users/{projectId}?year=2018`
+
+
+To retrieve an other year than the current one set the query parameter `year` with the appropriate value.
+
+
+##### example:
+
+```bash
+$ curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/stats/user/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/ba175147-c7a3-45d2-9b24-739ae2ed948c
+# will return something like:
+# {
+#    "userId":"ba175147-c7a3-45d2-9b24-739ae2ed948c",
+#    "year":2018,
+#    "words":{ // amount of words saved per month
+#       "0":23,
+#       "1":54,
+#       "2":16,
+#       ...
+#    },
+#    "tagsSet":{ // amount of tags set per month by tag index
+#       "0":{
+#          "2":12,
+#          "4":7
+#       },
+#       "1":{
+#          "2":5,
+#          "4":18,
+#          "5":21
+#       },
+#       "2":{
+#          "4":1,
+#          "5":24
+#       }
+#       ...
+#    },
+#    "tagsUnset":{ // amount of tags unset per month by tag index
+#       "0":{
+#          "0":2,
+#          "1":7
+#       },
+#       "1":{
+#          "0":5,
+#          "1":18,
+#          "2":49
+#       },
+#       "2":{
+#          "1":10,
+#          "2":34
+#       }
+#       ...
+#    }
+#    "updatedAt":1514926256221,
+# }
+
+
+
+$ curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/stats/users/3d0aa5aa-4660-4154-b6d9-907dbef10bb2
+
+# [
+#    {
+#       "userId":"ba175147-c7a3-45d2-9b24-739ae2ed948c",
+#       "year":2018,
+#       "words":{ // amount of words saved per month
+#          "0":23,
+#          "1":54,
+#          "2":16,
+#          ...
+#       },
+#       "tagsSet":{ // amount of tags set per month by tag index
+#          "0":{
+#             "2":12,
+#             "4":7
+#          },
+#          "1":{
+#             "2":5,
+#             "4":18,
+#             "5":21
+#          },
+#          "2":{
+#             "4":1,
+#             "5":24
+#          }
+#          ...
+#       },
+#       "tagsUnset":{ // amount of tags unset per month by tag index
+#          "0":{
+#             "0":2,
+#             "1":7
+#          },
+#          "1":{
+#             "0":5,
+#             "1":18,
+#             "2":49
+#          },
+#          "2":{
+#             "1":10,
+#             "2":34
+#          }
+#          ...
+#       }
+#       "updatedAt":1514926256221,
+#    },
+#    ...
+# ]
+```
+
+*(You can find your projectId and API Key in your project settings under the API Tab.)*
 
 
