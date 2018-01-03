@@ -242,6 +242,16 @@ i.e. get all translations updated after 2017-12-06T19:42:18.139Z (UTC): `https:/
 i.e. get all translations updated before 2017-12-06T19:42:18.139Z (UTC): `https://api.locize.io/pull/{projectId}/{version}/{language}/{namespace}?updatedAt=<1512589338139`
 
 
+Additionally another use case could be to remove unused translations. (This is only possible if you make use of the [Used translations](/api.html#used-translations) endpoint)
+To do this, you can pull the translations with an additional filter.
+
+i.e. get all translations used after 2017-12-06T19:42:18.139Z (UTC): `https://api.locize.io/pull/{projectId}/{version}/{language}/{namespace}?lastUsed=>1512589338139` (number of milliseconds since 1970/01/01)
+
+i.e. get all translations used before 2017-12-06T19:42:18.139Z (UTC): `https://api.locize.io/pull/{projectId}/{version}/{language}/{namespace}?lastUsed=<1512589338139`
+
+
+
+
 ##### example:
 
 ```bash
