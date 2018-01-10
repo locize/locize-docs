@@ -12,10 +12,12 @@ Using our locizify script is the simplest way to get your website or webapplicat
 Drop one line of code:
 
 ```js
-<script id="locizify" projectid="[PROJECT_ID]"
+<script
+    id="locizify" projectid="[PROJECT_ID]"
     apikey="[API_KEY]" referencelng="[LNG]"
     fallbacklng="[LNG]" saveMissing="true"
-    src="https://unpkg.com/locizify@^2.0.0" />
+    src="https://unpkg.com/locizify@^2.0.0"
+></script>
 ```
 
 *You can find your projectId and API Key in your projects settings.*
