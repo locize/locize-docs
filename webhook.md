@@ -192,7 +192,8 @@ All messages will have the following structure:
    "occurredAt":"2018-01-02T21:27:11.326Z",
    "message":"William Timberland created a translation order with gengo!",
    "payload":{
-      "service":"gengo"
+      "service":"gengo",
+      "version":"latest"
    },
    "meta":{
       "project":{
@@ -218,7 +219,8 @@ All messages will have the following structure:
    "occurredAt":"2018-01-02T21:27:11.326Z",
    "message":"gengo order completed!",
    "payload":{
-      "service":"gengo"
+      "service":"gengo",
+      "version":"latest"
    },
    "meta":{
       "project":{
