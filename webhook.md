@@ -382,7 +382,7 @@ All messages will have the following structure:
          "name":"THIS PROJECT",
          "slug":"albo6dxk"
       },
-      "link":"https://www.locize.io/p/albo6dxk/v/latest"
+      "link":"https://www.locize.io/p/albo6dxk/v/latest/en/landingpage"
    }
 }
 ```
@@ -405,7 +405,7 @@ All messages will have the following structure:
          "name":"THIS PROJECT",
          "slug":"albo6dxk"
       },
-      "link":"https://www.locize.io/p/albo6dxk/v/latest"
+      "link":"https://www.locize.io/p/albo6dxk/v/latest/en/landingpage"
    }
 }
 ```
