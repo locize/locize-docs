@@ -97,8 +97,8 @@ This is a little bit more advanced. It's a HTTP POST request with this url patte
 ```bash
 $ body=$(cat << EOF
 {
-"new.key": "default value",
-"another.new.key": "another default value"
+  "new.key": "default value",
+  "another.new.key": "another default value"
 }
 EOF
 )
@@ -106,11 +106,33 @@ EOF
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/missing/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
 ```
 
+##### optional context:
+In case you want to also save a context information for a specific translation, you can define a nested object like this:
+
+```bash
+$ body=$(cat << EOF
+{
+  "new.key": {
+    "value: "default value",
+    "context": {
+      "text: "description for this key"
+    }
+  },
+  "another.new.key": "another default value"
+}
+EOF
+)
+
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/missing/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
+```
+
+
 ***Advice:***
 - *Translations not defined in your reference language will not be shown in the locize app.*
 - *You should post missing translation to the reference language first!*
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
+
 
 
 ## Used translations
@@ -128,8 +150,8 @@ This is also a HTTP POST request, with this url pattern:
 ```bash
 $ body=$(cat << EOF
 [
-"new.key",
-"another.new.key"
+  "new.key",
+  "another.new.key"
 ]
 EOF
 )
@@ -156,9 +178,9 @@ To completely replace a namespace set the query parameter `replace` to true. Thi
 ```bash
 $ body=$(cat << EOF
 {
-"new.key": "default value",
-"another.existing.key": "another changed value",
-"a.key.to.delete": null
+  "new.key": "default value",
+  "another.existing.key": "another changed value",
+  "a.key.to.delete": null
 }
 EOF
 )
@@ -169,6 +191,28 @@ $ # or:
 $ # curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/update/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage?replace=true
 
 ```
+
+##### optional context:
+In case you want to also save a context information for a specific translation, you can define a nested object like this:
+
+```bash
+$ body=$(cat << EOF
+{
+  "new.key": {
+    "value": "default value",
+    "context": {
+      "text": "description for this key"
+    }
+  },
+  "another.existing.key": "another changed value",
+  "a.key.to.delete": null
+}
+EOF
+)
+
+$ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" -d $body https://api.locize.io/missing/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/landingpage
+```
+
 
 *(You can find your projectId and API Key in your project settings under the API Tab.)*
 
