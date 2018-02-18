@@ -14,6 +14,15 @@ And finally choose a channel to send new notifications to:
 
 <img src="/assets/img/services/slack_2.png" width="80%" />
 
+### slack commands
+
+There's also the possibility to use slack commands.
+Try **/locize help** to see the available options.
+
+<img src="/assets/img/services/slack_command_help.png" width="80%" />
+
+
+
 More information on [Slack App Directory](https://inweso.slack.com/apps/A71NM84Q6-locize)
 
 
