@@ -233,28 +233,40 @@ $ curl -X GET https://api.locize.io/download/3d0aa5aa-4660-4154-b6d9-907dbef10bb
 # [
 # {
 # "url": "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/common",
-# "key": "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/common"
+# "key": "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/common",
+# "size": 42,
+# "lastModified": "2017-11-23T19:39:16.000Z"
 # },
 # {
 # url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/landingpage",
-# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/landingpage"
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/de/landingpage",
+# "size": 21,
+# "lastModified": "2017-11-23T18:39:16.000Z"
 # },
 # {
 # url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common",
-# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common"
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common",
+# "size": 103,
+# "lastModified": "2017-11-23T19:37:16.000Z"
 # },
 # {
 # url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common",
-# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common"
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/latest/en/common",
+# "size": 12,
+# "lastModified": "2017-11-23T19:29:16.000Z"
 # },
 # ...
 # {
 # url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common",
-# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common"
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common",
+# "size": 236,
+# "lastModified": "2017-11-24T19:39:16.000Z"
 # },
 # {
 # url: "https://api.locize.io/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common",
-# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common"
+# key: "3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production/en/common",
+# "size": 417,
+# "lastModified": "2017-11-23T13:39:16.000Z"
 # }
 # ]
 ```
