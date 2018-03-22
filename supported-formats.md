@@ -32,7 +32,7 @@ Will import / export in JSON format flat ignoring `.` separation:
 }
 ```
 
-### CSV
+### CSV and XLSX
 
 Exports reference language and target language in one file. This format is also supported for imports and is an option to send translations to freelancers not supporting xliff or other formats.
 
@@ -122,6 +122,20 @@ Format used on Android.
 </resources>
 ```
 
+### Strings resources
+
+Format used for example for OS X and iOS.
+
+```strings
+
+"appName" = "locize.com - localization as a service";
+
+"label.cancel" = "cancel";
+
+"label.save" = "save";
+
+```
+
 ### Gettext po files
 
 Gettext standard format.
@@ -147,6 +161,47 @@ msgstr ""
 "rebum. Stet clita kasd gubergren, senza mare incontro sanctus est Lorem "
 "ipsum dolor sit amet."
 ```
+
+### TMX
+
+Used mostly as translation memory file.
+
+```xml
+<tmx version="1.4b">
+  <header creationtool="tmexchange" creationtoolversion="1.0.1" adminlang="en" datatype="PlainText" segtype="sentence" o-tmf="ABCTransMem" srclang="en"/>
+  <body>
+    <tu tuid="appName">
+      <prop type="group">my-namespace</prop>
+      <tuv xml:lang="en">
+        <seg>locize.com - localization as a service</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>locize.com - Lokalisierung als Dienstleistung</seg>
+      </tuv>
+    </tu>
+    <tu tuid="label.cancel">
+      <prop type="group">my-namespace</prop>
+      <tuv xml:lang="en">
+        <seg>cancel</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Abbrechen</seg>
+      </tuv>
+    </tu>
+    <tu tuid="label.save">
+      <prop type="group">my-namespace</prop>
+      <tuv xml:lang="en">
+        <seg>save</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Speichern</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
+
+```
+
 
 ### resx Files (.net)
 
