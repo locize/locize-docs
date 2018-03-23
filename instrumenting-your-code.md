@@ -89,6 +89,10 @@ Our samples:
 - [polyglot](https://github.com/locize/locize-polyglot-example)
 - [js-lingui](https://github.com/locize/locize-js-lingui-example)
 
+### 3rd party modules
+
+- [react-intl-namespaces](https://github.com/maciejw/react-intl-namespaces) Integrations of react-intl internationalization library with locize.com online translation service. Comes with support for namespaces, incontext editor, ...
+
 ### serverside
 
 For js environments please watch out for the i18next integration options.
