@@ -108,6 +108,6 @@ You can use following modules to convert between formats:
 
 - [xliff](https://github.com/locize/xliff)
 - [android-string-resource](https://github.com/locize/android-string-resource)
-- [gettext (.mo/.po](https://github.com/i18next/i18next-gettext-converter)
+- [gettext (.mo/.po)](https://github.com/i18next/i18next-gettext-converter)
 
 Simplest is to use those in combination with our [cli](https://github.com/locize/locize-cli) to build an automated production pipeline powered by grunt, gulp, npm script, ...
