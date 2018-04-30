@@ -362,8 +362,8 @@ This is easy. It's a HTTP POST request without body with this url pattern:
 
 ```bash
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/copy/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/version/latest/production
-$ # {"projectId":"3d0aa5aa-4660-4154-b6d9-907dbef10bb2","jobId":"0bb35e4a-8f16-4997-866a-1332a59825e0
-","event":"saveVersionRequested","startedAt":1525094049152}
+$ # {"jobId":"0bb35e4a-8f16-4997-866a-1332a59825e0
+"}
 
 ```
 
@@ -383,8 +383,8 @@ This is very easy. It's a HTTP POST request without body with this url pattern:
 
 ```bash
 $ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/publish/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/production
-$ # {"projectId":"3d0aa5aa-4660-4154-b6d9-907dbef10bb2","jobId":"0bb35e4a-8f16-4997-866a-1332a59825e0
-","event":"publishVersionRequested","startedAt":1525094049152}
+$ # {"jobId":"0bb35e4a-8f16-4997-866a-1332a59825e0
+"}
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab. Keep in mind to use the API Key for the correct `{version}`)*
@@ -403,6 +403,10 @@ It's a simple HTTP GET request without body with this url pattern:
 
 ```bash
 $ curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer <API_KEY>" https://api.locize.io/jobs/3d0aa5aa-4660-4154-b6d9-907dbef10bb2/0bb35e4a-8f16-4997-866a-1332a59825e0
+$ # {"projectId":"3d0aa5aa-4660-4154-b6d9-907dbef10bb2","jobId":"0bb35e4a-8f16-4997-866a-1332a59825e0
+","event":"saveVersionRequested","startedAt":1525094049152}
+
+
 ```
 
 *(You can find your projectId and API Key in your project settings under the API Tab. The jobId is returned by the async action)*
