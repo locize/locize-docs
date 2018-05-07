@@ -9,6 +9,8 @@ Make sure you have a secure https endpoint.
 
 The following messages will be sent as json payload with a POST request.
 
+*You should respond with a successful http status code 200 within 10 seconds.*
+
 All messages will have the following structure:
 ```json
 {
