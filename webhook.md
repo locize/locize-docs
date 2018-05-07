@@ -10,6 +10,12 @@ Make sure you have a secure https endpoint.
 The following messages will be sent as json payload with a POST request.
 
 *You should respond with a successful http status code 200 within 10 seconds.*
+*In case you want to debug your endpoint, you can try to call it for example like this:*
+
+```bash
+$ curl 'https://my-webhook-endpoint.com' -X POST -H "Content-type: application/json" --data '{"id":"1e20c276-ebcc-447e-8443-0f4002a6fe3a","name":"dummyTestEvent","occurredAt":"2018-05-07T17:00:55.151Z","message":"John Doe just added a webhook to MyProject!","payload":{"messageTypes":["languageAdded","languageDeleted","versionAdded","versionDeleted","referenceLanguageChanged","orderCreated","orderCompleted","invitationAccepted","versionPublished","versionOverwrote","namespaceAdded","namespaceDeleted","namespaceCompleted","namespaceNotCompletedAnymore"]},"meta":{"project":{"id":"1a2395f3-a66a-40b4-8113-c9cf7bc5a3c4","name":"MyProject","slug":"1a415z5b"},"user":{"id":"1b257ec5-fc07-4ad3-b810-c0734f2aac73","firstname":"John","lastname":"Doe"},"link":"https://www.locize.io/p/1a415z5b/v/latest"}}'
+```
+
 
 All messages will have the following structure:
 ```json
